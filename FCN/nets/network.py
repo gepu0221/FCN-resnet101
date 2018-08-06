@@ -48,6 +48,7 @@ class Network(object):
                   layer_utils.l_deconv2d([3, 3, 21, 21],[1,2,2,1], "SAME", "deconv3",i=4),
                   layer_utils.l_deconv2d([3, 3, 21, 21],[1,2,2,1], "SAME", "deconv4",i=8)
                   ]
+        #self.net[0] use to deconv2d 
         net = layer_utils.Layers(layers,self.nets[0],self.images)
         self.res = net.inference(self.layer['block4'])
         return self.res
