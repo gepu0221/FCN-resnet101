@@ -41,6 +41,7 @@ class Network(object):
     #add layers 
     def build_networks(self):
         layers = [
+                  #def __init__(self, filter, strides, padding, name ,i)
                   layer_utils.l_deconv2d([3, 3, 512, 1000],[1,2,2,1], "SAME", "deconv1",i=1),
                   layer_utils.l_relu("relu2"),
                   layer_utils.l_deconv2d([3, 3, 21, 512],[1,2,2,1], "SAME", "deconv2",i=2),
